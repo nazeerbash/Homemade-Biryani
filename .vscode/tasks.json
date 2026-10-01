@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Run owner-secured website",
+      "command": "ruby",
+      "args": ["owner_server.rb"],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "owner-secured-website",
+        "pattern": {
+          "regexp": "^(.*)$",
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving public storefront and authenticated owner dashboard",
+          "endsPattern": "Serving public storefront and authenticated owner dashboard"
+        }
+      }
+    }
+  ]
+}

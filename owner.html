@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Recipe Management | Owner Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="owner.css">
+  <script src="owner.js" defer></script>
+</head>
+<body>
+  <header class="owner-header">
+    <a class="owner-brand" href="index.html">
+      <span class="owner-brand-mark" aria-hidden="true">ಅ</span>
+      <span><strong>Recipe management</strong><small>OWNER DASHBOARD</small></span>
+    </a>
+    <a class="back-link" href="index.html">← Back to the website</a>
+  </header>
+
+  <main class="owner-main">
+    <section class="dashboard-intro">
+      <div class="eyebrow"><span></span> YOUR KITCHEN, YOUR RECIPES</div>
+      <h1>Recipe <em>management.</em></h1>
+      <p>Add ingredients, set quantities and prices, and define the batch sizes you use. Your changes save automatically in this browser.</p>
+    </section>
+
+    <section class="storage-notice" aria-label="Storage information">
+      <span class="notice-icon" aria-hidden="true">i</span>
+      <p><strong>Owner sign-in required.</strong> Recipes and photos are saved only in this browser, not on a shared server; export a backup to move them to another device. This local HTTP setup is not encrypted, so use it only on a trusted private Wi-Fi network. Do not expose it to the public internet.</p>
+    </section>
+
+    <section class="dashboard-toolbar" aria-label="Recipe actions">
+      <div class="recipe-count"><strong id="recipe-count">0</strong><span>recipes in your kitchen</span></div>
+      <div class="toolbar-actions">
+        <button class="button button-quiet" id="import-button" type="button">Import backup</button>
+        <button class="button button-dark" id="export-button" type="button">Export backup ↓</button>
+        <button class="button button-saffron" id="add-recipe-button" type="button">＋ Add recipe</button>
+        <input id="import-file" type="file" accept="application/json,.json" hidden>
+      </div>
+    </section>
+
+    <div class="dashboard-status" id="dashboard-status" role="status" aria-live="polite"></div>
+    <section class="recipe-list" id="recipe-list" aria-label="Editable recipes"></section>
+  </main>
+
+  <footer class="owner-footer">
+    <span>Homemade Biryani · Jagalur</span>
+    <a href="index.html">View storefront ↗</a>
+  </footer>
+</body>
+</html>
