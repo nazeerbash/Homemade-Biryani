@@ -1,4 +1,4 @@
-const BUSINESS_PHONE = "+91 78926 88891";
+const BUSINESS_PHONE = "+91 89705 74001";
 const WHATSAPP_NUMBER = BUSINESS_PHONE.replace(/\D/g, "");
 const RECIPE_STORAGE_KEY = "jagalur-food-recipes-v1";
 
